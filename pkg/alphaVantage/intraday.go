@@ -1,8 +1,9 @@
-package goAlphaVantage
+package alphaVantage
 
 import (
 	"encoding/json"
 	"time"
+	"github.com/ClintonMorrison/goAlphaVantage/internal/parse"
 )
 
 
@@ -21,7 +22,7 @@ func (m *rawIntradayMetadata) Parse() Metadata {
 		panic(err)
 	}
 
-	lastRefreshed, err := timeFromStringLocation(m.LastRefreshed, timezone)
+	lastRefreshed, err := parse.TimeFromStringLocation(m.LastRefreshed, timezone)
 	if err != nil {
 		panic(err)
 	}

@@ -1,9 +1,9 @@
-package goAlphaVantage
+package alphaVantage
 
 import (
 	"testing"
 	"time"
-	"github.com/ClintonMorrison/goAlphaVantage/config"
+	"github.com/ClintonMorrison/goAlphaVantage/internal/config"
 )
 
 func assertStringEquals(t *testing.T, expected string, actual string) {

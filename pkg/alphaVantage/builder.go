@@ -1,4 +1,4 @@
-package goAlphaVantage
+package alphaVantage
 
 import "net/http"
 

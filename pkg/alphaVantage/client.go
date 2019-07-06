@@ -1,45 +1,12 @@
-package goAlphaVantage
+package alphaVantage
 
 import (
 	"net/http"
 	"fmt"
 	"strings"
 	"io/ioutil"
+	"encoding/json"
 )
-
-type Interval string
-const (
-	INTERVAL_1 Interval = "1min"
-	INTERVAL_5 Interval = "5min"
-	INTERVAL_15 Interval = "5min"
-	INTERVAL_30 Interval = "30min"
-	INTERVAL_60 Interval = "360min"
-)
-
-func intervalFromString(s string) Interval {
-	switch s {
-	case "1min": return INTERVAL_1
-	case "5min": return INTERVAL_5
-	case "15min": return INTERVAL_15
-	case "30min": return INTERVAL_30
-	case "60min": return INTERVAL_60
-	default: return INTERVAL_60
-	}
-}
-
-type Size string
-const (
-	SIZE_COMPACT Size = "compact"
-	SIZE_FULL Size = "full"
-)
-
-func sizeFromString(s string) Size {
-	switch s {
-	case "Full size": return SIZE_FULL
-	default: return SIZE_COMPACT
-
-	}
-}
 
 type AlphaVantage struct {
 	key string
@@ -50,6 +17,14 @@ type AlphaVantage struct {
 type rawResponse struct {
 	Code int
 	Body []byte
+}
+
+type rawErrorResponse struct {
+	Note string `json:"Note"`
+}
+
+func (e rawErrorResponse) Error() string {
+	return e.Note
 }
 
 func (a *AlphaVantage) request(params map[string]string) (*rawResponse, error) {
@@ -69,6 +44,13 @@ func (a *AlphaVantage) request(params map[string]string) (*rawResponse, error) {
 	body, err := ioutil.ReadAll(resp.Body)
 	if err != nil {
 		return nil, err
+	}
+
+	// Check for error
+	errResponse := &rawErrorResponse{}
+	json.Unmarshal(body, errResponse)
+	if len(errResponse.Error()) != 0 {
+		return nil, errResponse
 	}
 
 	return &rawResponse{

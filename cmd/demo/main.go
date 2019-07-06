@@ -4,8 +4,8 @@ import (
 	"net/http"
 	"net"
 	"time"
-	"github.com/ClintonMorrison/goAlphaVantage"
-	"github.com/ClintonMorrison/goAlphaVantage/config"
+	"github.com/ClintonMorrison/goAlphaVantage/pkg/alphaVantage"
+	"github.com/ClintonMorrison/goAlphaVantage/internal/config"
 )
 
 
@@ -16,21 +16,22 @@ func main() {
 		}).Dial,
 		TLSHandshakeTimeout: 5 * time.Second,
 	}
+
 	var httpClient = &http.Client{
 		Timeout: time.Second * 10,
 		Transport: httpTransport,
 	}
 
-	alphaVantage := goAlphaVantage.Builder().
+	client := alphaVantage.Builder().
 		Key(config.ALPHA_VANTAGE_KEY).
 		HttpClient(httpClient).
 		Build()
 
 
-	_, err := alphaVantage.TimeSeriesIntraday(
-		"MSFT",
-		goAlphaVantage.INTERVAL_30,
-		goAlphaVantage.SIZE_FULL)
+	_, err := client.TimeSeriesIntraday(
+		"TSE:SHOP",
+		alphaVantage.INTERVAL_30,
+		alphaVantage.SIZE_FULL)
 
 	if err != nil {
 		panic(err)

@@ -1,4 +1,4 @@
-package goAlphaVantage
+package alphaVantage
 
 import (
 	"testing"
@@ -11,7 +11,8 @@ func TestTimeSeriesDailyAdjusted_full(t *testing.T) {
 	resp, err := alphaVantage.TimeSeriesDailyAdjusted("MSFT", SIZE_FULL)
 
 	if err != nil {
-		t.Error(err)
+		t.Errorf("API error: %s", err.Error())
+		return
 	}
 
 	// Metadata
@@ -38,7 +39,8 @@ func TestTimeSeriesDailyAdjusted_compact(t *testing.T) {
 	resp, err := alphaVantage.TimeSeriesDailyAdjusted("MSFT", SIZE_COMPACT)
 
 	if err != nil {
-		t.Error(err)
+		t.Errorf("API error: %s", err.Error())
+		return
 	}
 
 	// Metadata

@@ -1,7 +1,8 @@
-package goAlphaVantage
+package alphaVantage
 
 import (
 	"time"
+	"github.com/ClintonMorrison/goAlphaVantage/internal/parse"
 )
 
 type Quote struct {
@@ -34,11 +35,11 @@ type rawQuote struct {
 
 func (q *rawQuote) Parse() *Quote {
 	return &Quote{
-		Open: floatFromString(q.Open),
-		High: floatFromString(q.High),
-		Low: floatFromString(q.Low),
-		Close: floatFromString(q.Close),
-		Volume: floatFromString(q.Volume),
+		Open: parse.FloatFromString(q.Open),
+		High: parse.FloatFromString(q.High),
+		Low: parse.FloatFromString(q.Low),
+		Close: parse.FloatFromString(q.Close),
+		Volume: parse.FloatFromString(q.Volume),
 	}
 }
 
@@ -55,14 +56,14 @@ type rawAdjustedQuote struct {
 
 func (q *rawAdjustedQuote) Parse() *AdjustedQuote {
 	return &AdjustedQuote{
-		Open: floatFromString(q.Open),
-		High: floatFromString(q.High),
-		Low: floatFromString(q.Low),
-		AdjustedClose: floatFromString(q.AdjustedClose),
-		Close: floatFromString(q.Close),
-		Volume: floatFromString(q.Volume),
-		DividendAmount: floatFromString(q.DividendAmount),
-		SplitCoefficient: floatFromString(q.SplitCoefficient),
+		Open: parse.FloatFromString(q.Open),
+		High: parse.FloatFromString(q.High),
+		Low: parse.FloatFromString(q.Low),
+		AdjustedClose: parse.FloatFromString(q.AdjustedClose),
+		Close: parse.FloatFromString(q.Close),
+		Volume: parse.FloatFromString(q.Volume),
+		DividendAmount: parse.FloatFromString(q.DividendAmount),
+		SplitCoefficient: parse.FloatFromString(q.SplitCoefficient),
 	}
 }
 
@@ -75,7 +76,7 @@ func (r *rawTimeSeries) Parse() *TimeSeries {
 
 	for timeString, rawQuote := range *r {
 		quote := rawQuote.Parse()
-		t, _ := timeFromString(timeString)
+		t, _ := parse.TimeFromString(timeString)
 		quotes[t] = *quote
 	}
 
@@ -92,7 +93,7 @@ func (r *rawAdjustedTimeSeries) Parse() *AdjustedTimeSeries {
 
 	for timeString, rawQuote := range *r {
 		quote := rawQuote.Parse()
-		t, _ := timeFromString(timeString)
+		t, _ := parse.TimeFromString(timeString)
 		quotes[t] = *quote
 	}
 
