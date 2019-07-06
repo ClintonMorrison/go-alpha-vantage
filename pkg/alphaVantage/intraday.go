@@ -74,7 +74,7 @@ type TimeSeriesIntraday struct {
 	Quotes TimeSeries
 }
 
-func (a *AlphaVantage) TimeSeriesIntraday(symbol string, interval Interval, size Size) (*TimeSeriesIntraday, error) {
+func (a *AlphaVantage) TimeSeriesIntraday(symbol string, interval Interval, size Size) (*TimeSeriesIntraday, *ApiError) {
 	params := map[string]string{
 		"function": "TIME_SERIES_INTRADAY",
 		"symbol": symbol,
@@ -83,16 +83,16 @@ func (a *AlphaVantage) TimeSeriesIntraday(symbol string, interval Interval, size
 		"datatype": "json",
 	}
 
-	resp, err := a.request(params)
-	if err != nil {
-		return nil, err
+	resp, apiError := a.request(params)
+	if apiError != nil {
+		return nil, apiError
 	}
 
 	raw := rawTimeSeriesIntraday{}
-	err = json.Unmarshal(resp.Body, &raw)
+	err := json.Unmarshal(resp.Body, &raw)
 	if err != nil {
-		return nil, err
+		return nil, ToApiError(err, ERROR_RESPONSE_PARSE)
 	}
 
-	return raw.Parse(), err
+	return raw.Parse(), nil
 }

@@ -27,7 +27,19 @@ func (e rawErrorResponse) Error() string {
 	return e.Note
 }
 
-func (a *AlphaVantage) request(params map[string]string) (*rawResponse, error) {
+func (e rawErrorResponse) ToApiError() *ApiError {
+	errorType := ERROR_OTHER
+
+	if strings.Contains(e.Note, "API call frequency") {
+		errorType = ERROR_RATE_LIMIT
+	}
+
+	return &ApiError{
+		Type: errorType,
+		Message: e.Note}
+}
+
+func (a *AlphaVantage) request(params map[string]string) (*rawResponse, *ApiError) {
 	params["apikey"] = a.key
 	params["datatype"] = "json"
 
@@ -38,19 +50,21 @@ func (a *AlphaVantage) request(params map[string]string) (*rawResponse, error) {
 	resp, err := a.httpClient.Get(url)
 
 	if err != nil {
-		return nil, err
+		return nil, &ApiError{
+			Type: ERROR_REQUEST_FAILED,
+			Message: err.Error()}
 	}
 
 	body, err := ioutil.ReadAll(resp.Body)
 	if err != nil {
-		return nil, err
+		return nil, ToApiError(err, ERROR_RESPONSE_PARSE)
 	}
 
 	// Check for error
 	errResponse := &rawErrorResponse{}
 	json.Unmarshal(body, errResponse)
 	if len(errResponse.Error()) != 0 {
-		return nil, errResponse
+		return nil, errResponse.ToApiError()
 	}
 
 	return &rawResponse{

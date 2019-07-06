@@ -55,7 +55,7 @@ type TimeSeriesDaily struct {
 	Quotes TimeSeries
 }
 
-func (a *AlphaVantage) TimeSeriesDaily(symbol string, size Size) (*TimeSeriesDaily, error) {
+func (a *AlphaVantage) TimeSeriesDaily(symbol string, size Size) (*TimeSeriesDaily, *ApiError) {
 	params := map[string]string{
 		"function": "TIME_SERIES_DAILY",
 		"symbol": symbol,
@@ -63,17 +63,17 @@ func (a *AlphaVantage) TimeSeriesDaily(symbol string, size Size) (*TimeSeriesDai
 		"datatype": "json",
 	}
 
-	resp, err := a.request(params)
-	if err != nil {
-		return nil, err
+	resp, apiError := a.request(params)
+	if apiError != nil {
+		return nil, apiError
 	}
 
 
 	raw := rawTimeSeriesDaily{}
-	err = json.Unmarshal(resp.Body, &raw)
+	err := json.Unmarshal(resp.Body, &raw)
 	if err != nil {
-		return nil, err
+		return nil, ToApiError(err, ERROR_RESPONSE_PARSE)
 	}
 
-	return raw.Parse(), err
+	return raw.Parse(), nil
 }
