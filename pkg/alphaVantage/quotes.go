@@ -71,16 +71,16 @@ type rawTimeSeries map[string]rawQuote
 
 type TimeSeries map[time.Time]Quote
 
-func (r *rawTimeSeries) Parse() *TimeSeries {
+func (r rawTimeSeries) Parse() TimeSeries {
 	quotes := make(TimeSeries, 0)
 
-	for timeString, rawQuote := range *r {
+	for timeString, rawQuote := range r {
 		quote := rawQuote.Parse()
 		t, _ := parse.TimeFromString(timeString)
 		quotes[t] = *quote
 	}
 
-	return &quotes
+	return quotes
 }
 
 
@@ -88,7 +88,7 @@ type rawAdjustedTimeSeries map[string]rawAdjustedQuote
 
 type AdjustedTimeSeries map[time.Time]AdjustedQuote
 
-func (r *rawAdjustedTimeSeries) Parse() *AdjustedTimeSeries {
+func (r *rawAdjustedTimeSeries) Parse() AdjustedTimeSeries {
 	quotes := make(AdjustedTimeSeries, 0)
 
 	for timeString, rawQuote := range *r {
@@ -97,7 +97,7 @@ func (r *rawAdjustedTimeSeries) Parse() *AdjustedTimeSeries {
 		quotes[t] = *quote
 	}
 
-	return &quotes
+	return quotes
 }
 
 

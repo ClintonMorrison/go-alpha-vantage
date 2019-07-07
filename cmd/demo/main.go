@@ -5,7 +5,8 @@ import (
 	"net"
 	"time"
 	"github.com/ClintonMorrison/goAlphaVantage/pkg/alphaVantage"
-	"github.com/ClintonMorrison/goAlphaVantage/internal/config"
+	"github.com/ClintonMorrison/goAlphaVantage/config"
+	"fmt"
 )
 
 
@@ -28,12 +29,16 @@ func main() {
 		Build()
 
 
-	_, err := client.TimeSeriesIntraday(
+	quotes, err := client.TimeSeriesIntraday(
 		"TSE:SHOP",
 		alphaVantage.INTERVAL_30,
 		alphaVantage.SIZE_FULL)
 
 	if err != nil {
 		panic(err)
+	}
+
+	for date, quote := range quotes {
+		fmt.Printf("%s - %f\n", date.String(), quote.Close)
 	}
 }

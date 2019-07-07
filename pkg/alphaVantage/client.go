@@ -57,7 +57,7 @@ func (a *AlphaVantage) request(params map[string]string) (*rawResponse, *ApiErro
 
 	body, err := ioutil.ReadAll(resp.Body)
 	if err != nil {
-		return nil, ToApiError(err, ERROR_RESPONSE_PARSE)
+		return nil, ToApiError(err, ERROR_PARSE)
 	}
 
 	// Check for error

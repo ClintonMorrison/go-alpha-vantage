@@ -6,27 +6,14 @@ import (
 
 
 type rawTimeSeriesDailyAdjusted struct {
-	MetaData rawDailyMetadata `json:"Meta Data"`
 	AdjustedTimeSeriesDaily rawAdjustedTimeSeries `json:"Time Series (Daily)"`
 }
 
-
-func (r *rawTimeSeriesDailyAdjusted) Parse() *TimeSeriesDailyAdjusted {
-	metadata := r.MetaData.Parse()
-	rawQuotes := r.AdjustedTimeSeriesDaily
-
-	return &TimeSeriesDailyAdjusted{
-		Metadata: metadata,
-		Quotes: *rawQuotes.Parse(),
-	}
+func (r *rawTimeSeriesDailyAdjusted) Parse() AdjustedTimeSeries {
+	return r.AdjustedTimeSeriesDaily.Parse()
 }
 
-type TimeSeriesDailyAdjusted struct {
-	Metadata Metadata
-	Quotes AdjustedTimeSeries
-}
-
-func (a *AlphaVantage) TimeSeriesDailyAdjusted(symbol string, size Size) (*TimeSeriesDailyAdjusted, *ApiError) {
+func (a *AlphaVantage) TimeSeriesDailyAdjusted(symbol string, size Size) (AdjustedTimeSeries, *ApiError) {
 	params := map[string]string{
 		"function": "TIME_SERIES_DAILY_ADJUSTED",
 		"symbol": symbol,
@@ -39,12 +26,11 @@ func (a *AlphaVantage) TimeSeriesDailyAdjusted(symbol string, size Size) (*TimeS
 		return nil, apiError
 	}
 
-
 	raw := rawTimeSeriesDailyAdjusted{}
 	err := json.Unmarshal(resp.Body, &raw)
 	if err != nil {
 		return nil, &ApiError{
-			Type: ERROR_RESPONSE_PARSE,
+			Type: ERROR_PARSE,
 			Message: err.Error()}
 	}
 
