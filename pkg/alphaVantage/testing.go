@@ -3,7 +3,7 @@ package alphaVantage
 import (
 	"testing"
 	"time"
-	"github.com/ClintonMorrison/goAlphaVantage/internal/config"
+	"github.com/ClintonMorrison/goAlphaVantage/config"
 )
 
 func assertStringEquals(t *testing.T, expected string, actual string) {

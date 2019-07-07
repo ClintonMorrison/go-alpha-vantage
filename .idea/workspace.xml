@@ -3,10 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="ba990d21-b38c-4065-a593-9e39ae65d939" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/pkg/alphaVantage/client.go" afterPath="$PROJECT_DIR$/pkg/alphaVantage/client.go" />
+      <change beforePath="$PROJECT_DIR$/internal/config/credentials.go.sample" afterPath="$PROJECT_DIR$/config/credentials.go.sample" />
       <change beforePath="$PROJECT_DIR$/pkg/alphaVantage/daily.go" afterPath="$PROJECT_DIR$/pkg/alphaVantage/daily.go" />
-      <change beforePath="$PROJECT_DIR$/pkg/alphaVantage/daily_adjusted.go" afterPath="$PROJECT_DIR$/pkg/alphaVantage/daily_adjusted.go" />
-      <change beforePath="$PROJECT_DIR$/pkg/alphaVantage/intraday.go" afterPath="$PROJECT_DIR$/pkg/alphaVantage/intraday.go" />
+      <change beforePath="$PROJECT_DIR$/pkg/alphaVantage/testing.go" afterPath="$PROJECT_DIR$/pkg/alphaVantage/testing.go" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="client.go" pinned="false" current-in-tab="true">
+      <file leaf-file-name="client.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/client.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="326">
-              <caret line="36" column="19" lean-forward="true" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="19" />
+            <state relative-caret-position="313">
+              <caret line="73" column="1" lean-forward="false" selection-start-line="73" selection-start-column="1" selection-end-line="73" selection-end-column="1" />
               <folding>
                 <element signature="e#22#92#0" expanded="true" />
               </folding>
@@ -44,8 +43,8 @@
       <file leaf-file-name="daily_test.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/daily_test.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="3" lean-forward="false" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
+            <state relative-caret-position="-53">
+              <caret line="9" column="55" lean-forward="false" selection-start-line="9" selection-start-column="55" selection-end-line="9" selection-end-column="55" />
               <folding>
                 <element signature="e#22#43#0" expanded="true" />
               </folding>
@@ -56,8 +55,8 @@
       <file leaf-file-name="daily.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/daily.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="69" column="0" lean-forward="true" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+            <state relative-caret-position="184">
+              <caret line="18" column="17" lean-forward="true" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
               <folding>
                 <element signature="e#22#116#0" expanded="true" />
               </folding>
@@ -65,11 +64,21 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="credentials.go.sample" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/credentials.go.sample">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="32" lean-forward="true" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="daily_adjusted.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/daily_adjusted.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="44" column="16" lean-forward="true" selection-start-line="44" selection-start-column="16" selection-end-line="48" selection-end-column="3" />
+            <state relative-caret-position="384">
+              <caret line="43" column="40" lean-forward="true" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="40" />
               <folding>
                 <element signature="e#22#48#0" expanded="true" />
               </folding>
@@ -77,12 +86,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="intraday_test.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/intraday_test.go">
+      <file leaf-file-name="testing.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/testing.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="12" selection-end-column="3" />
-              <folding />
+            <state relative-caret-position="226">
+              <caret line="28" column="1" lean-forward="true" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
+              <folding>
+                <element signature="e#22#103#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -117,18 +128,6 @@
             <state relative-caret-position="100">
               <caret line="7" column="43" lean-forward="true" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="daily_adjusted_test.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/daily_adjusted_test.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="27" lean-forward="false" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
-              <folding>
-                <element signature="e#22#43#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -198,9 +197,10 @@
         <option value="$PROJECT_DIR$/pkg/alphaVantage/metadata.go" />
         <option value="$PROJECT_DIR$/pkg/alphaVantage/daily_adjusted.go" />
         <option value="$PROJECT_DIR$/pkg/alphaVantage/errors.go" />
-        <option value="$PROJECT_DIR$/pkg/alphaVantage/daily.go" />
         <option value="$PROJECT_DIR$/pkg/alphaVantage/intraday.go" />
         <option value="$PROJECT_DIR$/pkg/alphaVantage/client.go" />
+        <option value="$PROJECT_DIR$/pkg/alphaVantage/daily.go" />
+        <option value="$PROJECT_DIR$/pkg/alphaVantage/testing.go" />
       </list>
     </option>
   </component>
@@ -210,10 +210,10 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="513" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="27" />
     <option name="y" value="23" />
-    <option name="width" value="1407" />
+    <option name="width" value="1893" />
     <option name="height" value="1003" />
   </component>
   <component name="ProjectLevelVcsManager">
@@ -245,18 +245,17 @@
             <path>
               <item name="goAlphaVantage" type="b2602c69:ProjectViewProjectNode" />
               <item name="goAlphaVantage" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="goAlphaVantage" type="b2602c69:ProjectViewProjectNode" />
+              <item name="goAlphaVantage" type="462c0819:PsiDirectoryNode" />
               <item name="internal" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="goAlphaVantage" type="b2602c69:ProjectViewProjectNode" />
               <item name="goAlphaVantage" type="462c0819:PsiDirectoryNode" />
               <item name="pkg" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="goAlphaVantage" type="b2602c69:ProjectViewProjectNode" />
-              <item name="goAlphaVantage" type="462c0819:PsiDirectoryNode" />
-              <item name="pkg" type="462c0819:PsiDirectoryNode" />
-              <item name="alphaVantage" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -275,11 +274,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/pkg/alphaVantage" />
       <recent name="$PROJECT_DIR$/pkg/alphaVantage/stockTimeSeries" />
       <recent name="$PROJECT_DIR$/pkg/client" />
       <recent name="$PROJECT_DIR$/internal/testing" />
-      <recent name="$PROJECT_DIR$/internal/metadata" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -357,12 +356,6 @@
     <option name="remove_strategy" value="false" />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestTimeSeriesIntraday_compact_in_intraday_test_go - 2019.07.06 at 15h 32m 40s.xml">
-      <configuration name="TestTimeSeriesIntraday_compact in intraday_test.go" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TestTimeSeriesIntraday_compact_in_intraday_test_go - 2019.07.06 at 15h 32m 47s.xml">
-      <configuration name="TestTimeSeriesIntraday_compact in intraday_test.go" configurationId="GoTestRunConfiguration" />
-    </history-entry>
     <history-entry file="TestTimeSeriesIntraday_compact_in_intraday_test_go - 2019.07.06 at 15h 32m 53s.xml">
       <configuration name="TestTimeSeriesIntraday_compact in intraday_test.go" configurationId="GoTestRunConfiguration" />
     </history-entry>
@@ -387,18 +380,24 @@
     <history-entry file="go_test_alphaVantage - 2019.07.06 at 16h 09m 07s.xml">
       <configuration name="go test alphaVantage" configurationId="GoTestRunConfiguration" />
     </history-entry>
+    <history-entry file="go_test_alphaVantage - 2019.07.06 at 23h 57m 58s.xml">
+      <configuration name="go test alphaVantage" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="go_test_alphaVantage - 2019.07.06 at 23h 58m 13s.xml">
+      <configuration name="go test alphaVantage" configurationId="GoTestRunConfiguration" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="513" y="23" width="1407" height="1003" extended-state="0" />
+    <frame x="0" y="23" width="1920" height="1003" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25159913" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.184375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4489796" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4489796" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -612,14 +611,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/internal/config/credentials.go.sample">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="77" lean-forward="false" selection-start-line="0" selection-start-column="77" selection-end-line="0" selection-end-column="77" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -628,7 +619,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/internal/config/credentials.go">
+    <entry file="file://$PROJECT_DIR$/config/credentials.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="43" lean-forward="false" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="43" />
@@ -672,31 +663,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/testing.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="33" column="3" lean-forward="true" selection-start-line="33" selection-start-column="3" selection-end-line="33" selection-end-column="3" />
-          <folding>
-            <element signature="e#22#112#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/intraday_test.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="12" selection-end-column="3" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/daily_test.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="3" lean-forward="false" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
-          <folding>
-            <element signature="e#22#43#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -768,12 +739,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/intraday.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="96" column="25" lean-forward="false" selection-start-line="96" selection-start-column="25" selection-end-line="96" selection-end-column="25" />
+          <folding>
+            <element signature="e#22#117#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/daily_adjusted.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="44" column="16" lean-forward="true" selection-start-line="44" selection-start-column="16" selection-end-line="48" selection-end-column="3" />
+        <state relative-caret-position="384">
+          <caret line="43" column="40" lean-forward="true" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="40" />
           <folding>
             <element signature="e#22#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/client.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="73" column="1" lean-forward="false" selection-start-line="73" selection-start-column="1" selection-end-line="73" selection-end-column="1" />
+          <folding>
+            <element signature="e#22#92#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -788,33 +779,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/testing.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="28" column="1" lean-forward="true" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
+          <folding>
+            <element signature="e#22#103#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/daily_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-53">
+          <caret line="9" column="55" lean-forward="false" selection-start-line="9" selection-start-column="55" selection-end-line="9" selection-end-column="55" />
+          <folding>
+            <element signature="e#22#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/daily.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="69" column="0" lean-forward="true" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+        <state relative-caret-position="184">
+          <caret line="18" column="17" lean-forward="true" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
           <folding>
             <element signature="e#22#116#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/intraday.go">
+    <entry file="file://$PROJECT_DIR$/config/credentials.go.sample">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="96" column="25" lean-forward="false" selection-start-line="96" selection-start-column="25" selection-end-line="96" selection-end-column="25" />
-          <folding>
-            <element signature="e#22#117#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/client.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="36" column="19" lean-forward="true" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="19" />
-          <folding>
-            <element signature="e#22#92#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="60">
+          <caret line="4" column="32" lean-forward="true" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>

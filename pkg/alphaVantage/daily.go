@@ -68,7 +68,6 @@ func (a *AlphaVantage) TimeSeriesDaily(symbol string, size Size) (*TimeSeriesDai
 		return nil, apiError
 	}
 
-
 	raw := rawTimeSeriesDaily{}
 	err := json.Unmarshal(resp.Body, &raw)
 	if err != nil {
