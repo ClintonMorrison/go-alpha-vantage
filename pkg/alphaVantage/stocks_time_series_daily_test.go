@@ -23,7 +23,7 @@ func TestTimeSeriesDaily_full(t *testing.T) {
 	assertNotZero(t, quotes[date].Volume)
 }
 
-func TestTimeSeriesDaily_compact(t *testing.T) {
+func TestStocksTimeSeriesDaily_compact(t *testing.T) {
 	alphaVantage := clientForTest()
 
 	quotes, err := alphaVantage.TimeSeriesDaily("MSFT", SIZE_COMPACT)

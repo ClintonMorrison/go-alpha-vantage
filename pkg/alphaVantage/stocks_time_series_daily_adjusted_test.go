@@ -5,7 +5,7 @@ import (
 )
 
 
-func TestTimeSeriesDailyAdjusted_full(t *testing.T) {
+func TestStocksTimeSeriesDailyAdjusted_full(t *testing.T) {
 	alphaVantage := clientForTest()
 
 	quotes, err := alphaVantage.TimeSeriesDailyAdjusted("MSFT", SIZE_FULL)
@@ -26,7 +26,7 @@ func TestTimeSeriesDailyAdjusted_full(t *testing.T) {
 	assertNotZero(t, quotes[date].SplitCoefficient)
 }
 
-func TestTimeSeriesDailyAdjusted_compact(t *testing.T) {
+func TestStocksTimeSeriesDailyAdjusted_compact(t *testing.T) {
 	alphaVantage := clientForTest()
 
 	quotes, err := alphaVantage.TimeSeriesDailyAdjusted("MSFT", SIZE_COMPACT)

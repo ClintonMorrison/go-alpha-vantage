@@ -29,16 +29,12 @@ func main() {
 		Build()
 
 
-	quotes, err := client.TimeSeriesIntraday(
-		"TSE:SHOP",
-		alphaVantage.INTERVAL_30,
-		alphaVantage.SIZE_FULL)
+	quote, err := client.Quote("TSE:SHOP")
 
 	if err != nil {
 		panic(err)
 	}
 
-	for date, quote := range quotes {
-		fmt.Printf("%s - %f\n", date.String(), quote.Close)
-	}
+	fmt.Println(quote)
+
 }

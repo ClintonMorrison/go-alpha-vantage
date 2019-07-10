@@ -2,7 +2,7 @@ package alphaVantage
 
 import "testing"
 
-func TestTimeSeriesIntraday_full(t *testing.T) {
+func TestStocksTimeSeriesIntraday_full(t *testing.T) {
 	alphaVantage := clientForTest()
 
 	quotes, err := alphaVantage.TimeSeriesIntraday("MSFT", INTERVAL_30, SIZE_FULL)
@@ -20,7 +20,7 @@ func TestTimeSeriesIntraday_full(t *testing.T) {
 	assertNotZero(t, quotes[date].Volume)
 }
 
-func TestTimeSeriesIntraday_compact(t *testing.T) {
+func TestStocksTimeSeriesIntraday_compact(t *testing.T) {
 	alphaVantage := clientForTest()
 
 	quotes, err := alphaVantage.TimeSeriesIntraday("MSFT", INTERVAL_1, SIZE_COMPACT)

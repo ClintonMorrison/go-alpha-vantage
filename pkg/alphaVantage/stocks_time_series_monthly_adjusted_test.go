@@ -5,7 +5,7 @@ import (
 )
 
 
-func TestTimeSeriesMonthlyAdjusted(t *testing.T) {
+func TestStocksTimeSeriesMonthlyAdjusted(t *testing.T) {
 	alphaVantage := clientForTest()
 
 	quotes, err := alphaVantage.TimeSeriesMonthlyAdjusted("MSFT")
