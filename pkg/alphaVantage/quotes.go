@@ -43,7 +43,7 @@ func (q *rawQuote) Parse() *Quote {
 	}
 }
 
-type rawAdjustedQuote struct {
+type rawAdjustedDailyQuote struct {
 	Open   string `json:"1. open"`
 	High   string `json:"2. high"`
 	Low    string `json:"3. low"`
@@ -54,7 +54,29 @@ type rawAdjustedQuote struct {
 	SplitCoefficient string `json:"8. split coefficient"`
 }
 
+type rawAdjustedQuote struct {
+	Open   string `json:"1. open"`
+	High   string `json:"2. high"`
+	Low    string `json:"3. low"`
+	Close  string `json:"4. close"`
+	AdjustedClose  string `json:"5. adjusted close"`
+	Volume string `json:"6. volume"`
+	DividendAmount string `json:"7. dividend amount"`
+}
+
 func (q *rawAdjustedQuote) Parse() *AdjustedQuote {
+	return &AdjustedQuote{
+		Open: parse.FloatFromString(q.Open),
+		High: parse.FloatFromString(q.High),
+		Low: parse.FloatFromString(q.Low),
+		AdjustedClose: parse.FloatFromString(q.AdjustedClose),
+		Close: parse.FloatFromString(q.Close),
+		Volume: parse.FloatFromString(q.Volume),
+		DividendAmount: parse.FloatFromString(q.DividendAmount),
+	}
+}
+
+func (q *rawAdjustedDailyQuote) Parse() *AdjustedQuote {
 	return &AdjustedQuote{
 		Open: parse.FloatFromString(q.Open),
 		High: parse.FloatFromString(q.High),
@@ -84,10 +106,22 @@ func (r rawTimeSeries) Parse() TimeSeries {
 }
 
 
+type rawAdjustedDailyTimeSeries map[string]rawAdjustedDailyQuote
 type rawAdjustedTimeSeries map[string]rawAdjustedQuote
 
 type AdjustedTimeSeries map[time.Time]AdjustedQuote
 
+func (r *rawAdjustedDailyTimeSeries) Parse() AdjustedTimeSeries {
+	quotes := make(AdjustedTimeSeries, 0)
+
+	for timeString, rawQuote := range *r {
+		quote := rawQuote.Parse()
+		t, _ := parse.TimeFromString(timeString)
+		quotes[t] = *quote
+	}
+
+	return quotes
+}
 func (r *rawAdjustedTimeSeries) Parse() AdjustedTimeSeries {
 	quotes := make(AdjustedTimeSeries, 0)
 

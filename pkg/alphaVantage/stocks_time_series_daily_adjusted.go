@@ -6,7 +6,7 @@ import (
 
 
 type rawTimeSeriesDailyAdjusted struct {
-	AdjustedTimeSeriesDaily rawAdjustedTimeSeries `json:"Time Series (Daily)"`
+	AdjustedTimeSeriesDaily rawAdjustedDailyTimeSeries `json:"Time Series (Daily)"`
 }
 
 func (r *rawTimeSeriesDailyAdjusted) Parse() AdjustedTimeSeries {

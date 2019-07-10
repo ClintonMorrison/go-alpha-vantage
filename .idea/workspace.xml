@@ -3,16 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="ba990d21-b38c-4065-a593-9e39ae65d939" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/cmd/demo/main.go" afterPath="$PROJECT_DIR$/cmd/demo/main.go" />
-      <change beforePath="$PROJECT_DIR$/pkg/alphaVantage/client.go" afterPath="$PROJECT_DIR$/pkg/alphaVantage/client.go" />
-      <change beforePath="$PROJECT_DIR$/pkg/alphaVantage/daily.go" afterPath="$PROJECT_DIR$/pkg/alphaVantage/daily.go" />
-      <change beforePath="$PROJECT_DIR$/pkg/alphaVantage/daily_adjusted.go" afterPath="$PROJECT_DIR$/pkg/alphaVantage/daily_adjusted.go" />
-      <change beforePath="$PROJECT_DIR$/pkg/alphaVantage/daily_adjusted_test.go" afterPath="$PROJECT_DIR$/pkg/alphaVantage/daily_adjusted_test.go" />
-      <change beforePath="$PROJECT_DIR$/pkg/alphaVantage/daily_test.go" afterPath="$PROJECT_DIR$/pkg/alphaVantage/daily_test.go" />
-      <change beforePath="$PROJECT_DIR$/pkg/alphaVantage/errors.go" afterPath="$PROJECT_DIR$/pkg/alphaVantage/errors.go" />
-      <change beforePath="$PROJECT_DIR$/pkg/alphaVantage/intraday.go" afterPath="$PROJECT_DIR$/pkg/alphaVantage/intraday.go" />
-      <change beforePath="$PROJECT_DIR$/pkg/alphaVantage/intraday_test.go" afterPath="$PROJECT_DIR$/pkg/alphaVantage/intraday_test.go" />
-      <change beforePath="$PROJECT_DIR$/pkg/alphaVantage/metadata.go" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/pkg/alphaVantage/daily.go" afterPath="$PROJECT_DIR$/pkg/alphaVantage/stocks_time_series_daily.go" />
+      <change beforePath="$PROJECT_DIR$/pkg/alphaVantage/daily_adjusted.go" afterPath="$PROJECT_DIR$/pkg/alphaVantage/stocks_time_series_daily_adjusted.go" />
+      <change beforePath="$PROJECT_DIR$/pkg/alphaVantage/daily_adjusted_test.go" afterPath="$PROJECT_DIR$/pkg/alphaVantage/stocks_time_series_daily_adjusted_test.go" />
+      <change beforePath="$PROJECT_DIR$/pkg/alphaVantage/daily_test.go" afterPath="$PROJECT_DIR$/pkg/alphaVantage/stocks_time_series_daily_test.go" />
+      <change beforePath="$PROJECT_DIR$/pkg/alphaVantage/intraday.go" afterPath="$PROJECT_DIR$/pkg/alphaVantage/stocks_time_series_intraday.go" />
+      <change beforePath="$PROJECT_DIR$/pkg/alphaVantage/intraday_test.go" afterPath="$PROJECT_DIR$/pkg/alphaVantage/stocks_time_series_intraday_test.go" />
       <change beforePath="$PROJECT_DIR$/pkg/alphaVantage/quotes.go" afterPath="$PROJECT_DIR$/pkg/alphaVantage/quotes.go" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,11 +20,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="daily_adjusted.go" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/daily_adjusted.go">
+      <file leaf-file-name="stocks_time_series_daily_adjusted.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/stocks_time_series_daily_adjusted.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+            <state relative-caret-position="7">
+              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding>
                 <element signature="e#22#48#0" expanded="true" />
               </folding>
@@ -36,60 +32,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="intraday.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/intraday.go">
+      <file leaf-file-name="stocks_time_series_weekly_adjusted.go" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/stocks_time_series_weekly_adjusted.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="29" column="26" lean-forward="true" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
-              <folding>
-                <element signature="e#22#49#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cmd/demo/main.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="31" column="8" lean-forward="false" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
-              <folding>
-                <element signature="e#14#172#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="daily_adjusted_test.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/daily_adjusted_test.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="31" column="8" lean-forward="false" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
-              <folding>
-                <element signature="e#22#43#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="intraday_test.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/intraday_test.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="30" lean-forward="true" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+            <state relative-caret-position="64">
+              <caret line="8" column="83" lean-forward="false" selection-start-line="8" selection-start-column="83" selection-end-line="8" selection-end-column="83" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="daily.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/daily.go">
+      <file leaf-file-name="stocks_time_series_monthly_adjusted.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/stocks_time_series_monthly_adjusted.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="91">
-              <caret line="16" column="36" lean-forward="true" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
-              <folding>
-                <element signature="e#22#48#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="90">
+              <caret line="8" column="37" lean-forward="true" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -97,20 +55,28 @@
       <file leaf-file-name="quotes.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/quotes.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1010">
-              <caret line="80" column="3" lean-forward="true" selection-start-line="80" selection-start-column="3" selection-end-line="80" selection-end-column="3" />
-              <folding>
-                <element signature="e#22#100#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="277">
+              <caret line="125" column="33" lean-forward="false" selection-start-line="125" selection-start-column="33" selection-end-line="125" selection-end-column="33" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="daily_test.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/daily_test.go">
+      <file leaf-file-name="stocks_time_series_weekly_adjusted_test.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/stocks_time_series_weekly_adjusted_test.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="28" column="8" lean-forward="false" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
+            <state relative-caret-position="120">
+              <caret line="10" column="41" lean-forward="false" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="stocks_time_series_monthly_adjusted_test.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/stocks_time_series_monthly_adjusted_test.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="322">
+              <caret line="23" column="22" lean-forward="false" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
               <folding>
                 <element signature="e#22#43#0" expanded="true" />
               </folding>
@@ -118,23 +84,45 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="interval.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/interval.go">
+      <file leaf-file-name="testing.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/testing.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="23" lean-forward="false" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="23" />
+            <state relative-caret-position="159">
+              <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="errors.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/errors.go">
+      <file leaf-file-name="stocks_time_series_monthly_test.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/stocks_time_series_monthly_test.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+            <state relative-caret-position="330">
+              <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="stocks_time_series_weekly_test.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/stocks_time_series_weekly_test.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="33" lean-forward="true" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
               <folding>
-                <element signature="e#22#34#0" expanded="true" />
+                <element signature="e#22#43#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="stocks_time_series_daily_adjusted_test.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/stocks_time_series_daily_adjusted_test.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+              <folding>
+                <element signature="e#22#43#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -158,9 +146,12 @@
       <find>INTERVAL_30</find>
       <find>Print</find>
       <find>resp.Quotes</find>
+      <find>Daily</find>
     </findStrings>
     <replaceStrings>
       <replace>quotes</replace>
+      <replace>Monthly</replace>
+      <replace>Weekly</replace>
     </replaceStrings>
   </component>
   <component name="GOROOT" path="/usr/local/Cellar/go/1.9.3/libexec" />
@@ -170,8 +161,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/builder.go" />
-        <option value="$PROJECT_DIR$/client.go" />
         <option value="$PROJECT_DIR$/intraday.go" />
         <option value="$PROJECT_DIR$/intraday_test.go" />
         <option value="$PROJECT_DIR$/daily_adjusted.go" />
@@ -209,11 +198,20 @@
         <option value="$PROJECT_DIR$/pkg/alphaVantage/daily.go" />
         <option value="$PROJECT_DIR$/pkg/alphaVantage/daily_adjusted.go" />
         <option value="$PROJECT_DIR$/pkg/alphaVantage/intraday.go" />
-        <option value="$PROJECT_DIR$/pkg/alphaVantage/quotes.go" />
         <option value="$PROJECT_DIR$/cmd/demo/main.go" />
         <option value="$PROJECT_DIR$/pkg/alphaVantage/daily_adjusted_test.go" />
         <option value="$PROJECT_DIR$/pkg/alphaVantage/daily_test.go" />
         <option value="$PROJECT_DIR$/pkg/alphaVantage/intraday_test.go" />
+        <option value="$PROJECT_DIR$/pkg/alphaVantage/stocks/stocks.go" />
+        <option value="$PROJECT_DIR$/pkg/alphaVantage/stocks_time_series_monthly.go" />
+        <option value="$PROJECT_DIR$/pkg/alphaVantage/stocks_time_series_weekly.go" />
+        <option value="$PROJECT_DIR$/pkg/alphaVantage/stocks_time_series_monthly_test.go" />
+        <option value="$PROJECT_DIR$/pkg/alphaVantage/stocks_time_series_weekly_test.go" />
+        <option value="$PROJECT_DIR$/pkg/alphaVantage/stocks_time_series_monthly_adjusted.go" />
+        <option value="$PROJECT_DIR$/pkg/alphaVantage/quotes.go" />
+        <option value="$PROJECT_DIR$/pkg/alphaVantage/stocks_time_series_monthly_adjusted_test.go" />
+        <option value="$PROJECT_DIR$/pkg/alphaVantage/stocks_time_series_weekly_adjusted_test.go" />
+        <option value="$PROJECT_DIR$/pkg/alphaVantage/stocks_time_series_weekly_adjusted.go" />
       </list>
     </option>
   </component>
@@ -223,11 +221,11 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="27" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="797" />
     <option name="y" value="23" />
-    <option name="width" value="1893" />
-    <option name="height" value="1003" />
+    <option name="width" value="1116" />
+    <option name="height" value="994" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -303,6 +301,10 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/pkg/alphaVantage" />
+      <recent name="$PROJECT_DIR$/pkg/alphaVantage/params" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/pkg/alphaVantage" />
@@ -323,7 +325,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Test.go test alphaVantage">
+  <component name="RunManager" selected="Go Test.TestTimeSeriesWeeklyAdjusted in stocks_time_series_weekly_adjusted_test.go">
     <configuration name="Unnamed" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="goAlphaVantage" />
       <working_directory value="$PROJECT_DIR$/" />
@@ -333,31 +335,23 @@
       <package value="github.com/ClintonMorrison/goAlphaVantage/cmd/demo" />
       <directory value="$PROJECT_DIR$/" />
     </configuration>
-    <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
+    <configuration name="TestTimeSeriesMonthlyAdjusted in stocks_time_series_monthly_adjusted_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true">
       <module name="goAlphaVantage" />
-      <working_directory value="$PROJECT_DIR$/" />
+      <working_directory value="$PROJECT_DIR$/pkg/alphaVantage" />
       <go_parameters value="-i" />
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/cmd/demo/main.go" />
-      <directory value="$PROJECT_DIR$/" />
-    </configuration>
-    <configuration name="TestTimeSeriesIntraday_compact in intraday_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true">
-      <module name="goAlphaVantage" />
-      <working_directory value="$PROJECT_DIR$/pkg/alphaVantage" />
       <framework value="gotest" />
       <kind value="PACKAGE" />
       <package value="github.com/ClintonMorrison/goAlphaVantage/pkg/alphaVantage" />
-      <directory value="$PROJECT_DIR$/pkg/alphaVantage" />
-      <pattern value="^TestTimeSeriesIntraday_compact$" />
+      <pattern value="^TestTimeSeriesMonthlyAdjusted$" />
     </configuration>
-    <configuration name="TestTimeSeriesIntraday_full in intraday_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true">
+    <configuration name="TestTimeSeriesWeeklyAdjusted in stocks_time_series_weekly_adjusted_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true">
       <module name="goAlphaVantage" />
       <working_directory value="$PROJECT_DIR$/pkg/alphaVantage" />
+      <go_parameters value="-i" />
       <framework value="gotest" />
       <kind value="PACKAGE" />
       <package value="github.com/ClintonMorrison/goAlphaVantage/pkg/alphaVantage" />
-      <directory value="$PROJECT_DIR$/pkg/alphaVantage" />
-      <pattern value="^TestTimeSeriesIntraday_full$" />
+      <pattern value="^TestTimeSeriesWeeklyAdjusted$" />
     </configuration>
     <configuration name="go test alphaVantage" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true">
       <module name="goAlphaVantage" />
@@ -366,19 +360,39 @@
       <kind value="DIRECTORY" />
       <directory value="$PROJECT_DIR$/pkg/alphaVantage" />
     </configuration>
-    <list size="5">
+    <configuration name="stocks_time_series_monthly_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true">
+      <module name="goAlphaVantage" />
+      <working_directory value="$PROJECT_DIR$/pkg/alphaVantage" />
+      <go_parameters value="-i" />
+      <framework value="gotest" />
+      <kind value="FILE" />
+      <package value="github.com/ClintonMorrison/goAlphaVantage" />
+      <filePath value="$PROJECT_DIR$/pkg/alphaVantage/stocks_time_series_monthly_test.go" />
+    </configuration>
+    <configuration name="stocks_time_series_weekly_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true">
+      <module name="goAlphaVantage" />
+      <working_directory value="$PROJECT_DIR$/pkg/alphaVantage" />
+      <go_parameters value="-i" />
+      <framework value="gotest" />
+      <kind value="FILE" />
+      <package value="github.com/ClintonMorrison/goAlphaVantage" />
+      <filePath value="$PROJECT_DIR$/pkg/alphaVantage/stocks_time_series_weekly_test.go" />
+    </configuration>
+    <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Go Build.Unnamed" />
       <item index="1" class="java.lang.String" itemvalue="Go Test.go test alphaVantage" />
-      <item index="2" class="java.lang.String" itemvalue="Go Test.TestTimeSeriesIntraday_full in intraday_test.go" />
-      <item index="3" class="java.lang.String" itemvalue="Go Test.TestTimeSeriesIntraday_compact in intraday_test.go" />
-      <item index="4" class="java.lang.String" itemvalue="Go Build.go build main.go" />
+      <item index="2" class="java.lang.String" itemvalue="Go Test.stocks_time_series_weekly_test.go" />
+      <item index="3" class="java.lang.String" itemvalue="Go Test.stocks_time_series_monthly_test.go" />
+      <item index="4" class="java.lang.String" itemvalue="Go Test.TestTimeSeriesMonthlyAdjusted in stocks_time_series_monthly_adjusted_test.go" />
+      <item index="5" class="java.lang.String" itemvalue="Go Test.TestTimeSeriesWeeklyAdjusted in stocks_time_series_weekly_adjusted_test.go" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Go Test.go test alphaVantage" />
-        <item index="1" class="java.lang.String" itemvalue="Go Build.go build main.go" />
-        <item index="2" class="java.lang.String" itemvalue="Go Test.TestTimeSeriesIntraday_compact in intraday_test.go" />
-        <item index="3" class="java.lang.String" itemvalue="Go Test.TestTimeSeriesIntraday_full in intraday_test.go" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Go Test.TestTimeSeriesWeeklyAdjusted in stocks_time_series_weekly_adjusted_test.go" />
+        <item index="1" class="java.lang.String" itemvalue="Go Test.TestTimeSeriesMonthlyAdjusted in stocks_time_series_monthly_adjusted_test.go" />
+        <item index="2" class="java.lang.String" itemvalue="Go Test.stocks_time_series_monthly_test.go" />
+        <item index="3" class="java.lang.String" itemvalue="Go Test.stocks_time_series_weekly_test.go" />
+        <item index="4" class="java.lang.String" itemvalue="Go Test.go test alphaVantage" />
       </list>
     </recent_temporary>
   </component>
@@ -386,58 +400,70 @@
     <option name="remove_strategy" value="false" />
   </component>
   <component name="TestHistory">
-    <history-entry file="go_test_alphaVantage - 2019.07.06 at 16h 08m 12s.xml">
-      <configuration name="go test alphaVantage" configurationId="GoTestRunConfiguration" />
+    <history-entry file="TestTimeSeriesMonthlyAdjusted_in_stocks_time_series_monthly_adjusted_test_go - 2019.07.09 at 19h 20m 21s.xml">
+      <configuration name="TestTimeSeriesMonthlyAdjusted in stocks_time_series_monthly_adjusted_test.go" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="go_test_alphaVantage - 2019.07.06 at 16h 09m 07s.xml">
-      <configuration name="go test alphaVantage" configurationId="GoTestRunConfiguration" />
+    <history-entry file="TestTimeSeriesMonthlyAdjusted_in_stocks_time_series_monthly_adjusted_test_go - 2019.07.10 at 00h 10m 10s.xml">
+      <configuration name="TestTimeSeriesMonthlyAdjusted in stocks_time_series_monthly_adjusted_test.go" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="go_test_alphaVantage - 2019.07.06 at 23h 57m 58s.xml">
-      <configuration name="go test alphaVantage" configurationId="GoTestRunConfiguration" />
+    <history-entry file="TestTimeSeriesMonthlyAdjusted_in_stocks_time_series_monthly_adjusted_test_go - 2019.07.10 at 00h 10m 59s.xml">
+      <configuration name="TestTimeSeriesMonthlyAdjusted in stocks_time_series_monthly_adjusted_test.go" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="go_test_alphaVantage - 2019.07.06 at 23h 58m 13s.xml">
-      <configuration name="go test alphaVantage" configurationId="GoTestRunConfiguration" />
+    <history-entry file="TestTimeSeriesMonthlyAdjusted_in_stocks_time_series_monthly_adjusted_test_go - 2019.07.10 at 00h 11m 07s.xml">
+      <configuration name="TestTimeSeriesMonthlyAdjusted in stocks_time_series_monthly_adjusted_test.go" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="go_test_alphaVantage - 2019.07.07 at 00h 04m 45s.xml">
-      <configuration name="go test alphaVantage" configurationId="GoTestRunConfiguration" />
+    <history-entry file="TestTimeSeriesMonthlyAdjusted_in_stocks_time_series_monthly_adjusted_test_go - 2019.07.10 at 00h 11m 20s.xml">
+      <configuration name="TestTimeSeriesMonthlyAdjusted in stocks_time_series_monthly_adjusted_test.go" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="go_test_alphaVantage - 2019.07.07 at 00h 26m 53s.xml">
-      <configuration name="go test alphaVantage" configurationId="GoTestRunConfiguration" />
+    <history-entry file="TestTimeSeriesMonthlyAdjusted_in_stocks_time_series_monthly_adjusted_test_go - 2019.07.10 at 00h 11m 26s.xml">
+      <configuration name="TestTimeSeriesMonthlyAdjusted in stocks_time_series_monthly_adjusted_test.go" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="go_test_alphaVantage - 2019.07.07 at 00h 27m 16s.xml">
-      <configuration name="go test alphaVantage" configurationId="GoTestRunConfiguration" />
+    <history-entry file="TestTimeSeriesWeeklyAdjusted_in_stocks_time_series_weekly_adjusted_test_go - 2019.07.10 at 00h 11m 44s.xml">
+      <configuration name="TestTimeSeriesWeeklyAdjusted in stocks_time_series_weekly_adjusted_test.go" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="go_test_alphaVantage - 2019.07.07 at 00h 27m 42s.xml">
-      <configuration name="go test alphaVantage" configurationId="GoTestRunConfiguration" />
+    <history-entry file="TestTimeSeriesWeeklyAdjusted_in_stocks_time_series_weekly_adjusted_test_go - 2019.07.10 at 00h 11m 58s.xml">
+      <configuration name="TestTimeSeriesWeeklyAdjusted in stocks_time_series_weekly_adjusted_test.go" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="go_test_alphaVantage - 2019.07.07 at 00h 27m 59s.xml">
-      <configuration name="go test alphaVantage" configurationId="GoTestRunConfiguration" />
+    <history-entry file="TestTimeSeriesWeeklyAdjusted_in_stocks_time_series_weekly_adjusted_test_go - 2019.07.10 at 00h 12m 13s.xml">
+      <configuration name="TestTimeSeriesWeeklyAdjusted in stocks_time_series_weekly_adjusted_test.go" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="go_test_alphaVantage - 2019.07.07 at 00h 28m 13s.xml">
-      <configuration name="go test alphaVantage" configurationId="GoTestRunConfiguration" />
+    <history-entry file="TestTimeSeriesWeeklyAdjusted_in_stocks_time_series_weekly_adjusted_test_go - 2019.07.10 at 00h 12m 34s.xml">
+      <configuration name="TestTimeSeriesWeeklyAdjusted in stocks_time_series_weekly_adjusted_test.go" configurationId="GoTestRunConfiguration" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1920" height="1003" extended-state="6" />
+    <frame x="797" y="23" width="1116" height="994" extended-state="0" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.184375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3172043" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4489796" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.45336226" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39849624" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39804772" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4489796" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.184375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39849624" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -453,43 +479,12 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/client.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="35" column="5" lean-forward="false" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
-          <folding>
-            <element signature="e#22#92#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/intraday.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="35" selection-end-column="1" />
-          <folding>
-            <element signature="e#22#49#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/intraday_test.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding>
-            <element signature="e#22#38#0" expanded="false" />
-            <element signature="e#679#733#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/daily.go">
+    <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/stocks_time_series_daily.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="900">
           <caret line="64" column="3" lean-forward="true" selection-start-line="64" selection-start-column="3" selection-end-line="64" selection-end-column="3" />
           <folding>
-            <element signature="e#22#48#0" expanded="true" />
+            <element signature="e#22#48#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -499,7 +494,7 @@
         <state relative-caret-position="465">
           <caret line="34" column="33" lean-forward="false" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
           <folding>
-            <element signature="e#22#100#0" expanded="true" />
+            <element signature="e#22#100#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -512,19 +507,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/metadata.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="31" column="41" lean-forward="false" selection-start-line="31" selection-start-column="41" selection-end-line="31" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/daily_test.go">
+    <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/metadata.go" />
+    <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/stocks_time_series_daily_test.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="22" column="13" lean-forward="true" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="e#22#43#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -533,7 +523,7 @@
         <state relative-caret-position="665">
           <caret line="40" column="3" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="40" selection-end-column="3" />
           <folding>
-            <element signature="e#22#92#0" expanded="true" />
+            <element signature="e#22#92#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -543,44 +533,27 @@
         <state relative-caret-position="532">
           <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
           <folding>
-            <element signature="e#22#100#0" expanded="true" />
+            <element signature="e#22#100#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/format.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="22" lean-forward="false" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/intraday_test.go">
+    <entry file="file://$PROJECT_DIR$/format.go" />
+    <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/stocks_time_series_intraday_test.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
           <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding>
-            <element signature="e#22#38#0" expanded="false" />
-            <element signature="e#679#733#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/metadata.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="931">
-          <caret line="53" column="20" lean-forward="false" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/intraday.go">
+    <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/metadata.go" />
+    <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/stocks_time_series_intraday.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
           <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding>
-            <element signature="e#22#49#0" expanded="true" />
+            <element signature="e#22#49#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -590,17 +563,17 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#22#92#0" expanded="true" />
+            <element signature="e#22#92#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/intraday.go">
+    <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/stocks_time_series_intraday.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
           <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
           <folding>
-            <element signature="e#22#49#0" expanded="true" />
+            <element signature="e#22#49#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -616,7 +589,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="37">
           <caret line="771" column="5" lean-forward="false" selection-start-line="771" selection-start-column="5" selection-end-line="771" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -624,7 +596,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="141">
           <caret line="70" column="5" lean-forward="false" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -632,7 +603,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="278">
           <caret line="278" column="5" lean-forward="false" selection-start-line="278" selection-start-column="5" selection-end-line="278" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -640,26 +610,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="13" column="8" lean-forward="true" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/credentials.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="43" lean-forward="false" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/format.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="22" lean-forward="false" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/format.go" />
     <entry file="file://$PROJECT_DIR$/internal/parse/util.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -673,16 +627,8 @@
         <state relative-caret-position="30">
           <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
           <folding>
-            <element signature="e#22#39#0" expanded="true" />
+            <element signature="e#22#39#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/size.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="25" lean-forward="true" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -694,27 +640,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/stockAdjustedTimeSeries/metadata.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="31" lean-forward="false" selection-start-line="0" selection-start-column="31" selection-end-line="0" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/metadata.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/stockAdjustedTimeSeries/metadata.go" />
+    <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/metadata.go" />
     <entry file="file://$PROJECT_DIR$/config/credentials.go.sample">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="32" lean-forward="true" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -723,36 +654,97 @@
         <state relative-caret-position="313">
           <caret line="73" column="1" lean-forward="false" selection-start-line="73" selection-start-column="1" selection-end-line="73" selection-end-column="1" />
           <folding>
-            <element signature="e#22#92#0" expanded="true" />
+            <element signature="e#22#92#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/testing.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="28" column="1" lean-forward="true" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
-          <folding>
-            <element signature="e#22#103#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/metadata.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/metadata.go" />
     <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/errors.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="313">
           <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding>
-            <element signature="e#22#34#0" expanded="true" />
+            <element signature="e#22#34#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmd/demo/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="8" lean-forward="false" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
+          <folding>
+            <element signature="e#14#172#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/stocks_time_series_daily_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="28" column="8" lean-forward="false" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
+          <folding>
+            <element signature="e#22#43#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/stocks_time_series_intraday_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="30" lean-forward="true" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/stocks_time_series_daily.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding>
+            <element signature="e#22#48#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/params/size.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/params/interval.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="23" lean-forward="false" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/stocks/stocks.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/credentials.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="40" lean-forward="true" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/size.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="30" lean-forward="true" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -764,81 +756,117 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/daily.go">
+    <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/stocks_time_series_intraday.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91">
-          <caret line="16" column="36" lean-forward="true" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
+        <state relative-caret-position="573">
+          <caret line="50" column="3" lean-forward="true" selection-start-line="50" selection-start-column="3" selection-end-line="50" selection-end-column="3" />
+          <folding>
+            <element signature="e#22#49#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/stocks_time_series_monthly.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="18" column="23" lean-forward="true" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/stocks_time_series_weekly.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="18" column="23" lean-forward="true" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/stocks_time_series_monthly_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/stocks_time_series_weekly_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="33" lean-forward="true" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
+          <folding>
+            <element signature="e#22#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/stocks_time_series_daily_adjusted_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+          <folding>
+            <element signature="e#22#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/stocks_time_series_daily_adjusted.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding>
             <element signature="e#22#48#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/intraday.go">
+    <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/testing.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="29" column="26" lean-forward="true" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
-          <folding>
-            <element signature="e#22#49#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="159">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cmd/demo/main.go">
+    <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/stocks_time_series_monthly_adjusted.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="8" lean-forward="false" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
-          <folding>
-            <element signature="e#14#172#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/daily_adjusted_test.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="8" lean-forward="false" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
-          <folding>
-            <element signature="e#22#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/daily_test.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="28" column="8" lean-forward="false" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
-          <folding>
-            <element signature="e#22#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/intraday_test.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="30" lean-forward="true" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+        <state relative-caret-position="90">
+          <caret line="8" column="37" lean-forward="true" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/quotes.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1010">
-          <caret line="80" column="3" lean-forward="true" selection-start-line="80" selection-start-column="3" selection-end-line="80" selection-end-column="3" />
+        <state relative-caret-position="277">
+          <caret line="125" column="33" lean-forward="false" selection-start-line="125" selection-start-column="33" selection-end-line="125" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/stocks_time_series_monthly_adjusted_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="23" column="22" lean-forward="false" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
           <folding>
-            <element signature="e#22#100#0" expanded="true" />
+            <element signature="e#22#43#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/daily_adjusted.go">
+    <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/stocks_time_series_weekly_adjusted_test.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding>
-            <element signature="e#22#48#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="120">
+          <caret line="10" column="41" lean-forward="false" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pkg/alphaVantage/stocks_time_series_weekly_adjusted.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="8" column="83" lean-forward="false" selection-start-line="8" selection-start-column="83" selection-end-line="8" selection-end-column="83" />
+          <folding />
         </state>
       </provider>
     </entry>
