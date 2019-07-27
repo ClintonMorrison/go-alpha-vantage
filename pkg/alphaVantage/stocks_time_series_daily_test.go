@@ -33,6 +33,9 @@ func TestStocksTimeSeriesDaily_compact(t *testing.T) {
 		return
 	}
 
+	// Make sure multiple quotes returned
+	assertGreaterThan(t, 10, len(quotes))
+
 	// Body
 	date := *timeFromMap(quotes)
 	assertStringEquals(t, "MSFT", quotes[date].Ticker)
@@ -43,4 +46,3 @@ func TestStocksTimeSeriesDaily_compact(t *testing.T) {
 	assertNotZero(t, quotes[date].Close)
 	assertNotZero(t, quotes[date].Volume)
 }
-

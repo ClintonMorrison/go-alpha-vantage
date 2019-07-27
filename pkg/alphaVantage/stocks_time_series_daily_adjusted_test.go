@@ -4,7 +4,6 @@ import (
 	"testing"
 )
 
-
 func TestStocksTimeSeriesDailyAdjusted_full(t *testing.T) {
 	alphaVantage := clientForTest()
 
@@ -14,6 +13,9 @@ func TestStocksTimeSeriesDailyAdjusted_full(t *testing.T) {
 		t.Errorf("API error: %s", err.Error())
 		return
 	}
+
+	// Make sure multiple quotes returned
+	assertGreaterThan(t, 10, len(quotes))
 
 	// Body
 	date := *timeFromAdjustedTimeSeries(quotes)
@@ -48,4 +50,3 @@ func TestStocksTimeSeriesDailyAdjusted_compact(t *testing.T) {
 	assertNotZero(t, quotes[date].Volume)
 	assertNotZero(t, quotes[date].SplitCoefficient)
 }
-

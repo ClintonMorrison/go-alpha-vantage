@@ -1,21 +1,21 @@
 package alphaVantage
 
 import (
-"encoding/json"
+	"encoding/json"
 )
 
 type rawTimeSeriesMonthly struct {
-	TimeSeriesDaily rawTimeSeries `json:"Monthly Time Series"`
+	DateSeries rawDateSeries `json:"Monthly Time Series"`
 }
 
 func (r *rawTimeSeriesMonthly) Parse(ticker string) TimeSeries {
-	return r.TimeSeriesDaily.Parse(ticker)
+	return r.DateSeries.Parse(ticker)
 }
 
-func (a *AlphaVantage) TimeSeriesMonthly(symbol string) (TimeSeries, *ApiError) {
+func (a *AlphaVantageClient) TimeSeriesMonthly(symbol string) (TimeSeries, *ApiError) {
 	params := map[string]string{
 		"function": "TIME_SERIES_MONTHLY",
-		"symbol": symbol,
+		"symbol":   symbol,
 		"datatype": "json",
 	}
 

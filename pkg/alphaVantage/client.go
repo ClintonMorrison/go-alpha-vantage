@@ -1,21 +1,51 @@
 package alphaVantage
 
 import (
-	"net/http"
+	"encoding/json"
 	"fmt"
+	"io/ioutil"
+	"net/http"
 	"net/url"
 	"strings"
-	"io/ioutil"
-	"encoding/json"
 	"time"
 )
 
-type AlphaVantage struct {
-	key string
-	baseUrl string
-	httpClient *http.Client
+type AlphaVantageClient struct {
+	key           string
+	baseUrl       string
+	httpClient    *http.Client
 	retryAttempts int // -1 for infinite
-	retryBackoff time.Duration
+	retryBackoff  time.Duration
+}
+
+func Client() *AlphaVantageClient {
+	return &AlphaVantageClient{
+		key:           "",
+		baseUrl:       "https://www.alphavantage.co/query",
+		httpClient:    &http.Client{},
+		retryAttempts: 100,
+		retryBackoff:  2 * time.Minute,
+	}
+}
+
+func (c *AlphaVantageClient) Key(key string) *AlphaVantageClient {
+	c.key = key
+	return c
+}
+
+func (c *AlphaVantageClient) BaseUrl(baseUrl string) *AlphaVantageClient {
+	c.baseUrl = baseUrl
+	return c
+}
+
+func (c *AlphaVantageClient) HttpClient(httpClient *http.Client) *AlphaVantageClient {
+	c.httpClient = httpClient
+	return c
+}
+
+func (c *AlphaVantageClient) RetryAttempts(retryAttempts int) *AlphaVantageClient {
+	c.retryAttempts = retryAttempts
+	return c
 }
 
 type rawResponse struct {
@@ -39,11 +69,11 @@ func (e rawErrorResponse) ToApiError() *ApiError {
 	}
 
 	return &ApiError{
-		Type: errorType,
+		Type:    errorType,
 		Message: e.Note}
 }
 
-func (a *AlphaVantage) request(params map[string]string) (*rawResponse, *ApiError) {
+func (a *AlphaVantageClient) request(params map[string]string) (*rawResponse, *ApiError) {
 	var resp *rawResponse
 	var apiError *ApiError
 
@@ -64,7 +94,7 @@ func (a *AlphaVantage) request(params map[string]string) (*rawResponse, *ApiErro
 	return resp, apiError
 }
 
-func (a *AlphaVantage) internalRequest(params map[string]string) (*rawResponse, *ApiError) {
+func (a *AlphaVantageClient) internalRequest(params map[string]string) (*rawResponse, *ApiError) {
 	params["apikey"] = a.key
 	params["datatype"] = "json"
 
@@ -78,7 +108,7 @@ func (a *AlphaVantage) internalRequest(params map[string]string) (*rawResponse, 
 
 	if err != nil {
 		return nil, &ApiError{
-			Type: ERROR_REQUEST_FAILED,
+			Type:    ERROR_REQUEST_FAILED,
 			Message: err.Error()}
 	}
 
@@ -100,7 +130,6 @@ func (a *AlphaVantage) internalRequest(params map[string]string) (*rawResponse, 
 	}, nil
 }
 
-
 func toQuery(params map[string]string) string {
 	if len(params) == 0 {
 		return ""
@@ -113,4 +142,3 @@ func toQuery(params map[string]string) string {
 
 	return strings.Join(fields, "&")
 }
-

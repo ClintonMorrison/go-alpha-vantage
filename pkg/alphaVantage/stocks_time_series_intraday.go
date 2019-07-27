@@ -5,8 +5,8 @@ import (
 )
 
 type rawTimeSeriesIntraday struct {
-	TimeSeries1 rawTimeSeries `json:"Time Series (1min)"`
-	TimeSeries5 rawTimeSeries `json:"Time Series (5min)"`
+	TimeSeries1  rawTimeSeries `json:"Time Series (1min)"`
+	TimeSeries5  rawTimeSeries `json:"Time Series (5min)"`
 	TimeSeries15 rawTimeSeries `json:"Time Series (15min)"`
 	TimeSeries30 rawTimeSeries `json:"Time Series (30min)"`
 	TimeSeries60 rawTimeSeries `json:"Time Series (60min)"`
@@ -25,18 +25,17 @@ func (r *rawTimeSeriesIntraday) TimeSeries() rawTimeSeries {
 	return r.TimeSeries60
 }
 
-
 func (r rawTimeSeriesIntraday) Parse(ticker string) TimeSeries {
 	return r.TimeSeries().Parse(ticker)
 }
 
-func (a *AlphaVantage) TimeSeriesIntraday(symbol string, interval Interval, size Size) (TimeSeries, *ApiError) {
+func (a *AlphaVantageClient) TimeSeriesIntraday(symbol string, interval Interval, size Size) (TimeSeries, *ApiError) {
 	params := map[string]string{
-		"function": "TIME_SERIES_INTRADAY",
-		"symbol": symbol,
-		"interval": string(interval),
+		"function":   "TIME_SERIES_INTRADAY",
+		"symbol":     symbol,
+		"interval":   string(interval),
 		"outputsize": string(size),
-		"datatype": "json",
+		"datatype":   "json",
 	}
 
 	resp, apiError := a.request(params)

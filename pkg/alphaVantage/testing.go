@@ -1,9 +1,9 @@
 package alphaVantage
 
 import (
+	"github.com/ClintonMorrison/goAlphaVantage/config"
 	"testing"
 	"time"
-	"github.com/ClintonMorrison/goAlphaVantage/config"
 )
 
 func assertStringEquals(t *testing.T, expected string, actual string) {
@@ -24,8 +24,14 @@ func assertNotZero(t *testing.T, actual float64) {
 	}
 }
 
-func clientForTest() *AlphaVantage {
-	return Builder().Key(config.ALPHA_VANTAGE_KEY).Build()
+func assertGreaterThan(t *testing.T, min int, actual int) {
+	if actual < min {
+		t.Errorf("expected '%d' to be greater than %d", actual, min)
+	}
+}
+
+func clientForTest() *AlphaVantageClient {
+	return Client().Key(config.ALPHA_VANTAGE_KEY)
 }
 
 func timeFromMap(series TimeSeries) *time.Time {
@@ -43,4 +49,3 @@ func timeFromAdjustedTimeSeries(series AdjustedTimeSeries) *time.Time {
 	t := time.Now()
 	return &t
 }
-

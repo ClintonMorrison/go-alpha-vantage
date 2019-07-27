@@ -12,6 +12,9 @@ func TestStocksTimeSeriesIntraday_full(t *testing.T) {
 		return
 	}
 
+	// Make sure multiple quotes returned
+	assertGreaterThan(t, 10, len(quotes))
+
 	date := *timeFromMap(quotes)
 	assertStringEquals(t, "MSFT", quotes[date].Ticker)
 	assertNotZero(t, float64(quotes[date].Time.Unix()))

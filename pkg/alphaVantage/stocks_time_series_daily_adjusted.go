@@ -1,24 +1,23 @@
 package alphaVantage
 
 import (
-"encoding/json"
+	"encoding/json"
 )
 
-
 type rawTimeSeriesDailyAdjusted struct {
-	AdjustedTimeSeriesDaily rawAdjustedDailyTimeSeries `json:"Time Series (Daily)"`
+	AdjustedTimeSeriesDaily rawAdjustedDateSeries `json:"Time Series (Daily)"`
 }
 
 func (r *rawTimeSeriesDailyAdjusted) Parse(ticker string) AdjustedTimeSeries {
 	return r.AdjustedTimeSeriesDaily.Parse(ticker)
 }
 
-func (a *AlphaVantage) TimeSeriesDailyAdjusted(symbol string, size Size) (AdjustedTimeSeries, *ApiError) {
+func (a *AlphaVantageClient) TimeSeriesDailyAdjusted(symbol string, size Size) (AdjustedTimeSeries, *ApiError) {
 	params := map[string]string{
-		"function": "TIME_SERIES_DAILY_ADJUSTED",
-		"symbol": symbol,
+		"function":   "TIME_SERIES_DAILY_ADJUSTED",
+		"symbol":     symbol,
 		"outputsize": string(size),
-		"datatype": "json",
+		"datatype":   "json",
 	}
 
 	resp, apiError := a.request(params)
@@ -30,7 +29,7 @@ func (a *AlphaVantage) TimeSeriesDailyAdjusted(symbol string, size Size) (Adjust
 	err := json.Unmarshal(resp.Body, &raw)
 	if err != nil {
 		return nil, &ApiError{
-			Type: ERROR_PARSE,
+			Type:    ERROR_PARSE,
 			Message: err.Error()}
 	}
 

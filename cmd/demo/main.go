@@ -1,14 +1,13 @@
 package main
 
 import (
-	"net/http"
-	"net"
-	"time"
-	"github.com/ClintonMorrison/goAlphaVantage/pkg/alphaVantage"
-	"github.com/ClintonMorrison/goAlphaVantage/config"
 	"fmt"
+	"github.com/ClintonMorrison/goAlphaVantage/config"
+	"github.com/ClintonMorrison/goAlphaVantage/pkg/alphaVantage"
+	"net"
+	"net/http"
+	"time"
 )
-
 
 func main() {
 	var httpTransport = &http.Transport{
@@ -19,22 +18,22 @@ func main() {
 	}
 
 	var httpClient = &http.Client{
-		Timeout: time.Second * 10,
+		Timeout:   time.Second * 10,
 		Transport: httpTransport,
 	}
 
-	client := alphaVantage.Builder().
+	client := alphaVantage.Client().
 		Key(config.ALPHA_VANTAGE_KEY).
-		HttpClient(httpClient).
-		Build()
+		HttpClient(httpClient)
 
-
-	quote, err := client.Quote("TSE:SHOP")
+	quotes, err := client.TimeSeriesMonthly("TSE:SHOP")
 
 	if err != nil {
 		panic(err)
 	}
 
-	fmt.Println(quote)
 
+	for _, quote := range quotes.Sorted() {
+		fmt.Printf("%s: %f\n", quote.Time.Format("2006-01-02"), quote.Close)
+	}
 }

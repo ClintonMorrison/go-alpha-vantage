@@ -12,7 +12,7 @@ const (
 )
 
 type ApiError struct {
-	Type ErrorType
+	Type    ErrorType
 	Message string
 }
 
@@ -22,6 +22,6 @@ func (e *ApiError) Error() string {
 
 func ToApiError(e error, errorType ErrorType) *ApiError {
 	return &ApiError{
-		Type: errorType,
+		Type:    errorType,
 		Message: e.Error()}
 }

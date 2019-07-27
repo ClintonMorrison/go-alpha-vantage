@@ -4,7 +4,6 @@ import (
 	"testing"
 )
 
-
 func TestStocksTimeSeriesWeeklyAdjusted(t *testing.T) {
 	alphaVantage := clientForTest()
 
@@ -14,6 +13,9 @@ func TestStocksTimeSeriesWeeklyAdjusted(t *testing.T) {
 		t.Errorf("API error: %s", err.Error())
 		return
 	}
+
+	// Make sure multiple quotes returned
+	assertGreaterThan(t, 10, len(quotes))
 
 	// Body
 	date := *timeFromAdjustedTimeSeries(quotes)

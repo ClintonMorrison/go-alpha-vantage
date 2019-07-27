@@ -6,44 +6,43 @@ import (
 	"time"
 )
 
-
 type rawGlobalQuote struct {
-	Symbol string `json:"01. symbol"`
-	Open string `json:"02. open"`
-	High string `json:"03. high"`
-	Low string `json:"04. low"`
-	Price string `json:"05. price"`
-	Volume string `json:"06. volume"`
+	Symbol           string `json:"01. symbol"`
+	Open             string `json:"02. open"`
+	High             string `json:"03. high"`
+	Low              string `json:"04. low"`
+	Price            string `json:"05. price"`
+	Volume           string `json:"06. volume"`
 	LatestTradingDay string `json:"07. latest trading day"`
-	PreviousClose string `json:"08. previous close"`
-	ChangePercent string `json:"10. change percent"`
+	PreviousClose    string `json:"08. previous close"`
+	ChangePercent    string `json:"10. change percent"`
 }
 
 type RealTimeQuote struct {
-	Ticker string
-	Time time.Time
-	Open float64
-	High float64
-	Low float64
-	Current float64
-	Volume float64
+	Ticker            string
+	Time              time.Time
+	Open              float64
+	High              float64
+	Low               float64
+	Current           float64
+	Volume            float64
 	LatestTradingDate time.Time
-	PreviousClose float64
-	PercentChange float64
+	PreviousClose     float64
+	PercentChange     float64
 }
 
 func (q *rawGlobalQuote) Parse(ticker string, t time.Time) RealTimeQuote {
 	return RealTimeQuote{
-		Ticker: ticker,
-		Time: t,
-		Open: parse.FloatFromString(q.Open),
-		High: parse.FloatFromString(q.High),
-		Low: parse.FloatFromString(q.Low),
-		Current: parse.FloatFromString(q.Price),
-		Volume: parse.FloatFromString(q.Volume),
+		Ticker:            ticker,
+		Time:              t,
+		Open:              parse.FloatFromString(q.Open),
+		High:              parse.FloatFromString(q.High),
+		Low:               parse.FloatFromString(q.Low),
+		Current:           parse.FloatFromString(q.Price),
+		Volume:            parse.FloatFromString(q.Volume),
 		LatestTradingDate: parse.DateFromString(q.LatestTradingDay),
-		PreviousClose: parse.FloatFromString(q.PreviousClose),
-		PercentChange: parse.FloatFromPercentString(q.ChangePercent)}
+		PreviousClose:     parse.FloatFromString(q.PreviousClose),
+		PercentChange:     parse.FloatFromPercentString(q.ChangePercent)}
 }
 
 type rawQuoteResponse struct {
@@ -55,10 +54,10 @@ func (r *rawQuoteResponse) Parse(ticker string, t time.Time) *RealTimeQuote {
 	return &quote
 }
 
-func (a *AlphaVantage) Quote(symbol string) (*RealTimeQuote, *ApiError) {
+func (a *AlphaVantageClient) Quote(symbol string) (*RealTimeQuote, *ApiError) {
 	params := map[string]string{
 		"function": "GLOBAL_QUOTE",
-		"symbol": symbol,
+		"symbol":   symbol,
 		"datatype": "json",
 	}
 

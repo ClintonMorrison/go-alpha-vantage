@@ -1,10 +1,10 @@
 package parse
 
 import (
-	"time"
-	"strconv"
 	"fmt"
+	"strconv"
 	"strings"
+	"time"
 )
 
 func TimeFromString(t string) (time.Time, error) {
@@ -19,8 +19,8 @@ func DateFromStringLocation(t string, location *time.Location) (time.Time, error
 	return time.ParseInLocation("2006-01-02", t, location)
 }
 
-func DateFromString(t string) (time.Time) {
-	result, err :=  time.Parse("2006-01-02", t)
+func DateFromString(t string) time.Time {
+	result, err := time.Parse("2006-01-02", t)
 
 	if err != nil {
 		fmt.Printf("Error parsing date: '%s': %s", t, err.Error())
@@ -28,7 +28,6 @@ func DateFromString(t string) (time.Time) {
 
 	return result
 }
-
 
 func FloatFromString(s string) float64 {
 	val, err := strconv.ParseFloat(s, 64)
