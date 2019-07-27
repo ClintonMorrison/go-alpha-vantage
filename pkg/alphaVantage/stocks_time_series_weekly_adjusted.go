@@ -9,8 +9,8 @@ type rawTimeSeriesWeeklyAdjusted struct {
 	AdjustedTimeSeriesWeekly rawAdjustedTimeSeries `json:"Weekly Adjusted Time Series"`
 }
 
-func (r *rawTimeSeriesWeeklyAdjusted) Parse() AdjustedTimeSeries {
-	return r.AdjustedTimeSeriesWeekly.Parse()
+func (r *rawTimeSeriesWeeklyAdjusted) Parse(ticker string) AdjustedTimeSeries {
+	return r.AdjustedTimeSeriesWeekly.Parse(ticker)
 }
 
 func (a *AlphaVantage) TimeSeriesWeeklyAdjusted(symbol string) (AdjustedTimeSeries, *ApiError) {
@@ -33,5 +33,5 @@ func (a *AlphaVantage) TimeSeriesWeeklyAdjusted(symbol string) (AdjustedTimeSeri
 			Message: err.Error()}
 	}
 
-	return raw.Parse(), nil
+	return raw.Parse(symbol), nil
 }

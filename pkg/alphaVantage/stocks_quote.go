@@ -20,6 +20,8 @@ type rawGlobalQuote struct {
 }
 
 type RealTimeQuote struct {
+	Ticker string
+	Time time.Time
 	Open float64
 	High float64
 	Low float64
@@ -30,8 +32,10 @@ type RealTimeQuote struct {
 	PercentChange float64
 }
 
-func (q *rawGlobalQuote) Parse() RealTimeQuote {
+func (q *rawGlobalQuote) Parse(ticker string, t time.Time) RealTimeQuote {
 	return RealTimeQuote{
+		Ticker: ticker,
+		Time: t,
 		Open: parse.FloatFromString(q.Open),
 		High: parse.FloatFromString(q.High),
 		Low: parse.FloatFromString(q.Low),
@@ -46,8 +50,8 @@ type rawQuoteResponse struct {
 	Quote rawGlobalQuote `json:"Global Quote"`
 }
 
-func (r *rawQuoteResponse) Parse() *RealTimeQuote {
-	quote := r.Quote.Parse()
+func (r *rawQuoteResponse) Parse(ticker string, t time.Time) *RealTimeQuote {
+	quote := r.Quote.Parse(ticker, t)
 	return &quote
 }
 
@@ -69,5 +73,5 @@ func (a *AlphaVantage) Quote(symbol string) (*RealTimeQuote, *ApiError) {
 		return nil, ToApiError(err, ERROR_PARSE)
 	}
 
-	return raw.Parse(), nil
+	return raw.Parse(symbol, time.Now()), nil
 }

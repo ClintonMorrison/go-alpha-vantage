@@ -16,6 +16,8 @@ func TestStocksTimeSeriesWeekly(t *testing.T) {
 
 	// Body
 	date := *timeFromMap(quotes)
+	assertStringEquals(t, "MSFT", quotes[date].Ticker)
+	assertNotZero(t, float64(quotes[date].Time.Unix()))
 	assertNotZero(t, quotes[date].Open)
 	assertNotZero(t, quotes[date].High)
 	assertNotZero(t, quotes[date].Low)

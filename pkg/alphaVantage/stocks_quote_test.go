@@ -12,6 +12,8 @@ func TestStocksQuote(t *testing.T) {
 		return
 	}
 
+	assertStringEquals(t, "MSFT", quote.Ticker)
+	assertNotZero(t, float64(quote.Time.Unix()))
 	assertNotZero(t, quote.Open)
 	assertNotZero(t, quote.High)
 	assertNotZero(t, quote.Low)

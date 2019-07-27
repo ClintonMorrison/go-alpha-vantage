@@ -3,15 +3,19 @@ package alphaVantage
 import (
 	"net/http"
 	"fmt"
+	"net/url"
 	"strings"
 	"io/ioutil"
 	"encoding/json"
+	"time"
 )
 
 type AlphaVantage struct {
 	key string
 	baseUrl string
 	httpClient *http.Client
+	retryAttempts int // -1 for infinite
+	retryBackoff time.Duration
 }
 
 type rawResponse struct {
@@ -40,8 +44,31 @@ func (e rawErrorResponse) ToApiError() *ApiError {
 }
 
 func (a *AlphaVantage) request(params map[string]string) (*rawResponse, *ApiError) {
+	var resp *rawResponse
+	var apiError *ApiError
+
+	retries := 0
+	for retries <= a.retryAttempts {
+		resp, apiError = a.internalRequest(params)
+
+		if apiError != nil && apiError.Type == ERROR_RATE_LIMIT {
+			fmt.Println("Retries", retries)
+			retries += 1
+			time.Sleep(a.retryBackoff)
+			continue
+		}
+
+		break
+	}
+
+	return resp, apiError
+}
+
+func (a *AlphaVantage) internalRequest(params map[string]string) (*rawResponse, *ApiError) {
 	params["apikey"] = a.key
 	params["datatype"] = "json"
+
+	params["symbol"] = strings.Replace(params["symbol"], ".", "-", -1) // "TSE:ATD.B" -> "TSE:ATD-B"
 
 	query := toQuery(params)
 	url := fmt.Sprintf("%s?%s", a.baseUrl, query)
@@ -81,7 +108,7 @@ func toQuery(params map[string]string) string {
 
 	fields := make([]string, 0, len(params))
 	for name, value := range params {
-		fields = append(fields, fmt.Sprintf("%s=%s", name, value))
+		fields = append(fields, fmt.Sprintf("%s=%s", name, url.QueryEscape(value)))
 	}
 
 	return strings.Join(fields, "&")

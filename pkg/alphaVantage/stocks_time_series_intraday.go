@@ -26,8 +26,8 @@ func (r *rawTimeSeriesIntraday) TimeSeries() rawTimeSeries {
 }
 
 
-func (r rawTimeSeriesIntraday) Parse() TimeSeries {
-	return r.TimeSeries().Parse()
+func (r rawTimeSeriesIntraday) Parse(ticker string) TimeSeries {
+	return r.TimeSeries().Parse(ticker)
 }
 
 func (a *AlphaVantage) TimeSeriesIntraday(symbol string, interval Interval, size Size) (TimeSeries, *ApiError) {
@@ -50,5 +50,5 @@ func (a *AlphaVantage) TimeSeriesIntraday(symbol string, interval Interval, size
 		return nil, ToApiError(err, ERROR_PARSE)
 	}
 
-	return raw.Parse(), nil
+	return raw.Parse(symbol), nil
 }

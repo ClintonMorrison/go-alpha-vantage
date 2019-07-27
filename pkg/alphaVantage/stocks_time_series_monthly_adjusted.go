@@ -2,6 +2,7 @@ package alphaVantage
 
 import (
 "encoding/json"
+	"fmt"
 )
 
 
@@ -9,8 +10,8 @@ type rawTimeSeriesMonthlyAdjusted struct {
 	AdjustedTimeSeriesMonthly rawAdjustedTimeSeries `json:"Monthly Adjusted Time Series"`
 }
 
-func (r *rawTimeSeriesMonthlyAdjusted) Parse() AdjustedTimeSeries {
-	return r.AdjustedTimeSeriesMonthly.Parse()
+func (r *rawTimeSeriesMonthlyAdjusted) Parse(ticker string) AdjustedTimeSeries {
+	return r.AdjustedTimeSeriesMonthly.Parse(ticker)
 }
 
 func (a *AlphaVantage) TimeSeriesMonthlyAdjusted(symbol string) (AdjustedTimeSeries, *ApiError) {
@@ -33,5 +34,7 @@ func (a *AlphaVantage) TimeSeriesMonthlyAdjusted(symbol string) (AdjustedTimeSer
 			Message: err.Error()}
 	}
 
-	return raw.Parse(), nil
+	fmt.Println("Returning", raw.Parse(symbol), "|", nil)
+
+	return raw.Parse(symbol), nil
 }
