@@ -1,7 +1,6 @@
 package alphaVantage
 
 import (
-	"github.com/ClintonMorrison/goAlphaVantage/config"
 	"testing"
 	"time"
 )
@@ -31,7 +30,7 @@ func assertGreaterThan(t *testing.T, min int, actual int) {
 }
 
 func clientForTest() *AlphaVantageClient {
-	return Client().Key(config.ALPHA_VANTAGE_KEY)
+	return Client().Key("TODO-KEY-HERE")
 }
 
 func timeFromMap(series TimeSeries) *time.Time {

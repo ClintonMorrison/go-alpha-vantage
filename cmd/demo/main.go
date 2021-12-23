@@ -2,11 +2,11 @@ package main
 
 import (
 	"fmt"
-	"github.com/ClintonMorrison/goAlphaVantage/config"
-	"github.com/ClintonMorrison/goAlphaVantage/pkg/alphaVantage"
 	"net"
 	"net/http"
 	"time"
+
+	"github.com/ClintonMorrison/goAlphaVantage/pkg/alphaVantage"
 )
 
 func main() {
@@ -23,7 +23,7 @@ func main() {
 	}
 
 	client := alphaVantage.Client().
-		Key(config.ALPHA_VANTAGE_KEY).
+		Key("ADD-KEY-HERE").
 		HttpClient(httpClient)
 
 	quotes, err := client.TimeSeriesMonthly("TSE:SHOP")
@@ -31,7 +31,6 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-
 
 	for _, quote := range quotes.Sorted() {
 		fmt.Printf("%s: %f\n", quote.Time.Format("2006-01-02"), quote.Close)
